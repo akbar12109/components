@@ -1,0 +1,14 @@
+---
+const { images, badge, isActive, circle, round } = Astro.props;
+---
+
+
+<!-- Rounded Full with badge & isActive -->
+<div class="relative inline-block">
+  {circle && <img class="inline-block object-cover w-24 h-24 rounded-full" src={images} alt="Avatar"/>}
+  {round && <img class="inline-block object-cover w-24 h-24 rounded-md" src={images} alt="Avatar"/>}
+  {badge && <span class="absolute top-0 right-0 inline-block items-center justify-center px-2 py-1 text-xs font-regular leading-none text-white bg-red-500 border-2 border-white rounded-full">67s</span>}
+  {isActive && <span class="absolute bottom-1 right-1 inline-block w-5 h-5 bg-green-600 border-2 border-white rounded-full"></span>}
+</div>
+
+
